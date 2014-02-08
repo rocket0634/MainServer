@@ -1,0 +1,78 @@
+---- Minecraft Crash Report ----
+// Daisy, daisy...
+
+Time: 7/25/13 5:58 PM
+Description: Exception in server tick loop
+
+java.lang.NoClassDefFoundError: net/minecraft/client/renderer/EntityRenderer
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at cpw.mods.fml.common.ModClassLoader.loadBaseModClass(ModClassLoader.java:101)
+	at cpw.mods.fml.common.modloader.ModLoaderModContainer.constructMod(ModLoaderModContainer.java:483)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.EventHandler.handleEvent(EventHandler.java:74)
+	at com.google.common.eventbus.SynchronizedEventHandler.handleEvent(SynchronizedEventHandler.java:45)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:313)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:296)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:267)
+	at cpw.mods.fml.common.LoadController.sendEventToModContainer(LoadController.java:194)
+	at cpw.mods.fml.common.LoadController.propogateStateMessage(LoadController.java:174)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.EventHandler.handleEvent(EventHandler.java:74)
+	at com.google.common.eventbus.SynchronizedEventHandler.handleEvent(SynchronizedEventHandler.java:45)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:313)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:296)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:267)
+	at cpw.mods.fml.common.LoadController.distributeStateMessage(LoadController.java:105)
+	at cpw.mods.fml.common.Loader.loadMods(Loader.java:510)
+	at cpw.mods.fml.server.FMLServerHandler.beginServerLoading(FMLServerHandler.java:86)
+	at cpw.mods.fml.common.FMLCommonHandler.onServerStart(FMLCommonHandler.java:350)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71197_b(DedicatedServer.java:69)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:443)
+	at net.minecraft.server.ThreadMinecraftServer.run(SourceFile:582)
+Caused by: java.lang.ClassNotFoundException: net.minecraft.client.renderer.EntityRenderer
+	at net.minecraft.launchwrapper.LaunchClassLoader.findClass(LaunchClassLoader.java:179)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 31 more
+Caused by: java.lang.RuntimeException: Attempted to load class bfb for invalid side SERVER
+	at cpw.mods.fml.common.asm.transformers.SideTransformer.transform(SideTransformer.java:50)
+	at net.minecraft.launchwrapper.LaunchClassLoader.runTransformers(LaunchClassLoader.java:267)
+	at net.minecraft.launchwrapper.LaunchClassLoader.findClass(LaunchClassLoader.java:165)
+	... 33 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.6.2
+	Operating System: Windows 8 (x86) version 6.2
+	Java Version: 1.7.0_25, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) Client VM (mixed mode, sharing), Oracle Corporation
+	Memory: 27071904 bytes (25 MB) / 52244480 bytes (49 MB) up to 259522560 bytes (247 MB)
+	JVM Flags: 0 total; 
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Suspicious classes: FML and Forge are installed
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v8.04 FML v6.2.35.804 Minecraft Forge 9.10.0.804 10 mods loaded, 10 mods active
+	mcp{8.04} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed
+	FML{6.2.35.804} [Forge Mod Loader] (coremods) Unloaded->Constructed
+	Forge{9.10.0.804} [Minecraft Forge] (coremods) Unloaded->Constructed
+	CodeChickenCore{0.9.0.0} [CodeChicken Core] (coremods) Unloaded->Constructed
+	NotEnoughItems{1.6.0.3} [Not Enough Items] (NotEnoughItems 1.6.0.3.jar) Unloaded->Constructed
+	FamiliarsAPI{1.6.2} [Familiars API] (Familiars_API_1.6.2a.zip) Unloaded->Constructed
+	Backpack{1.12.13} [Backpack] (backpack-1.12.13-1.6.2.zip) Unloaded->Constructed
+	FamiliarsDefaultMobPack{1.6.2} [Familiars DefaultMobPack] (Familiars_DefaultMobPack_1.6.2a.zip) Unloaded->Constructed
+	FamiliarsExtendedFamPack{1.6.2} [Familiars ExtendedFamPack] (Familiars_ExtendedFamPack_1.6.2a.zip) Unloaded->Constructed
+	mod_ZanMinimap{Not available} [mod_ZanMinimap] (ZansMinimap1.6.2.zip) Unloaded
+	Profiler Position: N/A (disabled)
+	Is Modded: Definitely; Server brand changed to 'fml,forge'
+	Type: Dedicated Server (map_server.txt)

@@ -1,0 +1,1 @@
+java -Xmx1024M -Xms1024M -jar minecraftforge-universal-1.6.2-9.10.0.804.jar
